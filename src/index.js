@@ -23,7 +23,7 @@ client.on('messageCreate', (message) => {
 
     if (content === 'hello' || content === 'hey' || content === 'hi' || content === 'sup') {
         message.reply('Hey there!!! :D');
-        console.log("Bot responded: \"Hey There!!! :D\" ");
+        console.log("Bot responded: \"Hey There! :D\" ");
     } else if (content === 'how are you?') {
         message.reply('I\'m doing Fantastic! What about you??');
         console.log("Bot responded: \"I\'m doing Fantastic! What about you??\" ");
