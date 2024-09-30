@@ -22,7 +22,7 @@ client.on('messageCreate', (message) => {
     const content = message.content.toLowerCase();
 
     if (content === 'hello' || content === 'hey' || content === 'hi' || content === 'sup') {
-        message.reply('Hey there!!!! :D');
+        message.reply('Hey there!!! :D');
         console.log("Bot responded: \"Hey There! :D\" ");
     } else if (content === 'how are you?') {
         message.reply('I\'m doing Fantastic!! What about you??');
