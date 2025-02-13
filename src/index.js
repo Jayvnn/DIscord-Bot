@@ -1,5 +1,6 @@
 //Imported Packages
 const {Client, IntentsBitField} = require('discord.js');
+const axios = require('axios');
 require('dotenv').config();
 
 const client = new Client({
@@ -17,20 +18,31 @@ client.on('ready', (clientUser) => {
     console.log(`${clientUser.user.tag} is currently online`);
 });
 
-client.on('messageCreate', (message) => {
+client.on('messageCreate', async msg => {
 
-    const content = message.content.toLowerCase();
+    const content = msg.content.toLowerCase();
+    const nickname = msg.member ? msg.member.nickname : null;
+    const username = msg.author.username;
 
-    if (content === 'hello!!' || content === 'hey!' || content === 'hi' || content === 'sup' || content == 'ello') {
-        message.reply('Hey there!! :D');
-        console.log("Bot responded: \"Hey There!! :D\" ");
-    } else if (content === 'how are you?') {
-        message.reply('I\'m doing Fantastic! What about you?');
-        console.log("Bot responded: \"I\'m doing Fantastic! What about you?\" ");
+    switch(content) {
+        case 'hello':
+        case 'hey':
+        case 'hi':
+        case 'sup':
+        case 'ello':
+            msg.reply(`Hey there ${nickname || username}!! :D`);
+            console.log(`Bot responded: "Hey there ${nickname || username}!! :D" `);
+            break;
+        case "how are you?":
+            msg.reply('I\'m doing Fantastic! What about you?');
+            console.log("Bot Responded: 'I\'m doing Fantastic!' ");
+            break;
+        default:
+            break;
     }
 })
 client.login(
-    process.env.BOT_TOKEN
+    process.env.CLIENT_TOKEN
 );
 
 /*
