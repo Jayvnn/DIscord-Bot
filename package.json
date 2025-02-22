@@ -18,12 +18,23 @@
     "axios": "^1.7.4",
     "colors": "^1.4.0",
     "common-tags": "^1.8.2",
+    "cross-spawn": "^7.0.3",
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "i": "^0.3.7",
     "moment": "^2.30.1",
     "ms": "^2.1.3",
+    "nodemon": "^3.1.9",
     "npm": "^10.8.2",
     "poru": "^5.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jayvnn/DIscord-Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jayvnn/DIscord-Bot/issues"
+  },
+  "homepage": "https://github.com/Jayvnn/DIscord-Bot#readme",
+  "devDependencies": {}
 }
