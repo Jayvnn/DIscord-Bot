@@ -30,7 +30,7 @@ client.on('messageCreate', async msg => {
         case 'hi':
         case 'sup':
         case 'ello':
-            msg.reply(`Hey there ${nickname || username}!!! :D`);
+            msg.reply(`Hey there ${nickname || username}! :D`);
             console.log(`Bot responded: "Hey there ${nickname || username}! :D" `);
             break;
         case "how are you?":
