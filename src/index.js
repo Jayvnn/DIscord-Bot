@@ -34,7 +34,7 @@ client.on('messageCreate', async msg => {
             console.log(`Bot responded: "Hey there ${nickname || username}! :D" `);
             break;
         case "how are you?":
-            msg.reply('I\'m doing Fantastic! What about you?');
+            msg.reply('I\'m doing Fantastic!! What about you?');
             console.log("Bot Responded: 'I\'m doing Fantastic!' ");
             break;
         default:
